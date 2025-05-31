@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title translate="no">Casa Cash Express</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .checkbox-group label {
+            padding: 10px;
+            cursor: pointer;
+            display: block; /* Makes the label block-level for easier tapping */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 5px 0; /* Adds spacing between options */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .checkbox-group input[type="radio"] {
+            display: none; /* Hide the default radio buttons */
+        }
+
+        .checkbox-group input[type="radio"]:checked + label {
+            background-color: #00796b; /* Change background color when checked */
+            color: white; /* Change text color when checked */
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <img src="images/apple-touch-icon.png" alt="Casa Cash Express Logo" class="logo">
+</header>
+
+    <div id="coming-soon" class="coming-soon section">
+        <h2>¡Dinero rápido por tu propiedad en cash!</h2>
+        <h3>Formulario de Información para Clientes</h3>
+        <form id="infoForm" action="gracias.php" method="post">
+            <div class="form-group">
+                <label for="clientName">Nombre:</label>
+                <input type="text" id="clientName" name="clientName" required minlength="3">
+            </div>
+            <div class="form-group">
+                <label for="secondName">Segundo Nombre (opcional):</label>
+                <input type="text" id="secondName" name="secondName">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Apellido:</label>
+                <input type="text" id="lastName" name="lastName" required minlength="3">
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Número de teléfono:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Pueblo:</label>
+                <select id="location" name="location" required>
+                <option value="">Seleccione una opción</option>
+                <option value="aguada">Aguada</option>
+<option value="aguadilla">Aguadilla</option>
+<option value="aguas_buenas">Aguas Buenas</option>
+<option value="aibonito">Aibonito</option>
+<option value="arecibo">Arecibo</option>
+<option value="arroyo">Arroyo</option>
+<option value="anasco">Añasco</option>
+<option value="barceloneta">Barceloneta</option>
+<option value="barranquitas">Barranquitas</option>
+<option value="bayamon">Bayamón</option>
+<option value="cabo_rojo">Cabo Rojo</option>
+<option value="caguas">Caguas</option>
+<option value="camuy">Camuy</option>
+<option value="canovanas">Canóvanas</option>
+<option value="carolina">Carolina</option>
+<option value="catano">Cataño</option>
+<option value="cayey">Cayey</option>
+<option value="ceiba">Ceiba</option>
+<option value="ciales">Ciales</option>
+<option value="cidra">Cidra</option>
+<option value="coamo">Coamo</option>
+<option value="comerio">Comerío</option>
+<option value="corozal">Corozal</option>
+<option value="culebra">Culebra</option>
+<option value="dorado">Dorado</option>
+<option value="fajardo">Fajardo</option>
+<option value="florida">Florida</option>
+<option value="guayama">Guayama</option>
+<option value="guayanilla">Guayanilla</option>
+<option value="guaynabo">Guaynabo</option>
+<option value="gurabo">Gurabo</option>
+<option value="guanica">Guánica</option>
+<option value="hatillo">Hatillo</option>
+<option value="hormigueros">Hormigueros</option>
+<option value="humacao">Humacao</option>
+<option value="isabela">Isabela</option>
+<option value="jayuya">Jayuya</option>
+<option value="juana_diaz">Juana Díaz</option>
+<option value="juncos">Juncos</option>
+<option value="lajas">Lajas</option>
+<option value="lares">Lares</option>
+<option value="las_marias">Las Marías</option>
+<option value="las_piedras">Las Piedras</option>
+<option value="loiza">Loíza</option>
+<option value="luquillo">Luquillo</option>
+<option value="manati">Manatí</option>
+<option value="maricao">Maricao</option>
+<option value="maunabo">Maunabo</option>
+<option value="mayaguez">Mayagüez</option>
+<option value="moca">Moca</option>
+<option value="morovis">Morovis</option>
+<option value="naguabo">Naguabo</option>
+<option value="naranjito">Naranjito</option>
+<option value="orocovis">Orocovis</option>
+<option value="patillas">Patillas</option>
+<option value="penuelas">Peñuelas</option>
+<option value="ponce">Ponce</option>
+<option value="quebradillas">Quebradillas</option>
+<option value="rincon">Rincón</option>
+<option value="rio_grande">Río Grande</option>
+<option value="sabana_grande">Sabana Grande</option>
+<option value="salinas">Salinas</option>
+<option value="san_german">San Germán</option>
+<option value="san_juan">San Juan</option>
+<option value="san_lorenzo">San Lorenzo</option>
+<option value="san_sebastian">San Sebastián</option>
+<option value="toa_baja">Toa Baja</option>
+<option value="toa_alta">Toa Alta</option>
+<option value="trujillo_alto">Trujillo Alto</option>
+<option value="utuado">Utuado</option>
+<option value="vega_alta">Vega Alta</option>
+<option value="vega_baja">Vega Baja</option>
+<option value="villalba">Villalba</option>
+<option value="yabucoa">Yabucoa</option>
+<option value="yauco">Yauco</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="propertyType">Tipo de propiedad:</label>
+                <select id="propertyType" name="propertyType" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="casa">Casa</option>
+                    <option value="departamento">Apartamento</option>
+                    <option value="local_comercial">Local Comercial</option>
+                    <option value="terreno">Terreno</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exactlocation">Ubicación:</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="barrio" name="ubicacion" value="barrio" required>
+                    <label for="barrio">Barrio</label>
+                    <input type="radio" id="sector" name="ubicacion" value="sector" required>
+                    <label for="sector">Sector</label>
+                    <input type="radio" id="urbanizacion" name="ubicacion" value="urbanizacion" required>
+                    <label for="urbanizacion">Urbanización</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="areaCode">Nombre de Barrio, Sector, Urbanización:</label>
+                <input type="text" id="areaCode" name="areaCode" oninput="showSuggestions(this.value)">
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+            <div class="form-group">
+                <label for="streetNumber">Calle y Número:</label>
+                <input type="text" id="streetNumber" name="streetNumber" required minlength="3">
+            </div>
+            <div class="form-group">
+                <label>¿La propiedad tiene algún tipo de deuda o gravamen?</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="deudaSi" name="deuda" value="si" required>
+                    <label for="deudaSi">Sí</label>
+                    <input type="radio" id="deudaNo" name="deuda" value="no" required>
+                    <label for="deudaNo">No</label>
+                </div>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div id="about" class="about section hidden">
+    <h1>¿Quiénes Somos?</h1>
+        <p>Casa Cash Express se especializa en la compra de propiedades a través de inversionistas. Ofrecemos un proceso rápido y transparente para que puedas vender tu propiedad sin complicaciones.</p>
+        
+        <h1>Nuestros Servicios</h1>
+        <ul>
+            <li>Compra directa de propiedades</li>
+            <li>Evaluación de su propiedad</li>
+            <li>Asesoramiento personalizado</li>
+        </ul>
+    </div>
+
+    <div id="terms" class="section hidden">
+    <h2>Términos y Condiciones</h2>
+        <p>Estos términos y condiciones rigen el uso del sitio web de Casa Cash Express y nuestros servicios relacionados. Al acceder a nuestro sitio web, aceptas estos términos.</p>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.instagram.com/casacashexpress" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="24" height="24">
+            </a>
+            <a href="https://www.facebook.com/CasaCashExpress" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="24" height="24">
+            </a>
+        </div>
+
+
+<footer style="text-align: center; padding: 10px; background-color: #005700; color: white;">
+            <a href="mailto:info@casacashexpress.com" style="color: white; text-decoration: none;">info@casacashexpress.com</a>
+
+    <p>© 2024 Casa Cash Express. Todos los derechos reservados.</p>
+</footer>
+    <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="192x192" href="favicon-192x192.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
